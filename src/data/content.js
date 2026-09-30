@@ -44,7 +44,7 @@ export const profile = {
   fullName: 'Tai Ngan (Tiffany) Phan',
   firstName: 'Tai Ngan',
   lastName: 'Phan',
-  status: 'Open to marketing & communication internships',
+  status: 'Open to Marketing & Communication Internships',
   portrait,
   email: 'phantaingan250511@gmail.com',
   phone: '+31 686 147 455',
