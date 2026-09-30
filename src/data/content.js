@@ -81,7 +81,7 @@ export const about = {
   ],
   seeking: {
     title: 'An internship in marketing or communication',
-    roles: ['Marketing', 'Communication', 'Social media', 'Content', 'Brand'],
+    roles: ['Marketing', 'Communication Strategy', 'Social media', 'Concept', 'Brand'],
     where: 'Anywhere in the Netherlands, working in-office with the team',
     strengths: 'Research-led thinking, clear messaging, hands-on content work',
   },
@@ -106,7 +106,7 @@ export const cases = [
       { n: '3+ yrs', l: 'of ongoing, remote collaboration' },
     ],
     visual: [
-      { type: 'phone', src: tiktokProfile, alt: "The pet shop's TikTok profile with 6,825 followers and 499K likes" },
+      { type: 'phone', fit: 'cover', src: tiktokProfile, alt: "The pet shop's TikTok profile with 6,825 followers and 499K likes" },
       { type: 'phone', src: tiktokOverview, alt: 'TikTok Studio key metrics for Sep 30, 2025 – Sep 29, 2026: 810.9K post views, 11K profile views, 37.8K likes, 722 comments and 24.4K shares' },
     ],
     extra: [

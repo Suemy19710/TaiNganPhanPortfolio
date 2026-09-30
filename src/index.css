@@ -424,3 +424,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;p
 .gallery .tile{aspect-ratio:1}
 a.copy{text-decoration:none;display:inline-flex;align-items:center}
 footer a{text-decoration:underline;text-underline-offset:3px}
+.phone-wrap.multi .phone img.fill{object-fit:cover}
+.nav-icon{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);color:var(--oxblood);transition:background .2s,color .2s,border-color .2s}
+.nav-icon svg{width:17px;height:17px}
+.nav-icon:hover{background:var(--oxblood);border-color:var(--oxblood);color:var(--on-accent)}

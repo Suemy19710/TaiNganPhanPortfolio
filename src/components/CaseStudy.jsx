@@ -253,7 +253,7 @@ export default function CaseStudy({ data, index }) {
         {data.visual.every((b) => b.type === 'phone') && data.visual.length > 1 ? (
           // several phone screenshots sit side by side in one row
           <div className="phone-wrap multi">
-            {data.visual.map((b) => <div className="phone" key={b.alt}><img src={b.src} alt={b.alt} loading="lazy" /></div>)}
+            {data.visual.map((b) => <div className="phone" key={b.alt}><img className={b.fit === 'cover' ? 'fill' : undefined} src={b.src} alt={b.alt} loading="lazy" /></div>)}
           </div>
         ) : (
           data.visual.map((b, i) => <Block key={i} block={b} />)
