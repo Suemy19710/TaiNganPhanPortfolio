@@ -4,6 +4,12 @@ import cidKiosk from '../assets/cid-kiosk.png'
 import cidTeam from '../assets/cid-team-stand.png'
 import cidLogo from '../assets/cid-logo.png'
 import tiktokProfile from '../assets/tiktok-profile.jpg'
+import tiktokOverview from '../assets/tiktok-overview-365.jpg'
+import tiktokViewers from '../assets/tiktok-viewers.jpg'
+import tiktok60 from '../assets/tiktok-60-days.jpg'
+import tiktokTopPosts from '../assets/tiktok-top-posts.jpg'
+import cidCollaborations from '../assets/cid-collaborations.webp'
+import cidOpenDay from '../assets/cid-open-day.webp'
 import etWood from '../assets/et-wood.jpg'
 import etFire from '../assets/et-fire.jpg'
 import etEarth from '../assets/et-earth.jpg'
@@ -12,7 +18,9 @@ import etMetal from '../assets/et-metal.jpg'
 import etSketch from '../assets/et-sketch.jpg'
 import etPoster from '../assets/et-poster.jpg'
 import etMoodboard from '../assets/et-moodboard.jpg'
-import etResearch from '../assets/et-research.webp'
+import etFocusGroup from '../assets/et-focus-group.webp'
+import etAffinity from '../assets/et-affinity-map.webp'
+import etDesk from '../assets/et-desk-observation.webp'
 import vsnl1 from '../assets/vsnl-1.jpg'
 import vsnl2 from '../assets/vsnl-2.jpg'
 import vsnl3 from '../assets/vsnl-3.jpg'
@@ -36,7 +44,6 @@ export const profile = {
   lastName: 'Phan',
   status: 'Open to marketing & communication internships',
   portrait,
-  tag: { title: 'Digital marketing', text: '& brand storytelling' },
   email: 'phantaingan250511@gmail.com',
   phone: '+31 686 147 455',
   phoneRaw: '+31686147455',
@@ -73,7 +80,6 @@ export const about = {
     roles: ['Marketing', 'Communication', 'Social media', 'Content', 'Brand'],
     where: 'Anywhere in the Netherlands; hybrid or on-site',
     strengths: 'Research-led thinking, clear messaging, hands-on content work',
-    culture: 'Comfortable in international teams, working across Vietnamese and Dutch contexts',
   },
 }
 
@@ -96,7 +102,32 @@ export const cases = [
       { n: '3+ yrs', l: 'of ongoing, remote collaboration' },
     ],
     visual: [
-      { type: 'phone', src: tiktokProfile, alt: "Screenshot of the pet shop's TikTok profile with 6,825 followers and 499K likes" },
+      { type: 'phone', src: tiktokOverview, alt: 'TikTok Studio key metrics for Sep 30, 2025 – Sep 29, 2026: 810.9K post views, 11K profile views, 37.8K likes, 722 comments and 24.4K shares' },
+    ],
+    extra: [
+      {
+        type: 'metrics',
+        title: 'One year of results',
+        period: 'Sep 2025 – Sep 2026',
+        items: [
+          { n: '810.9K', l: 'post views' },
+          { n: '700.9K', l: 'total viewers' },
+          { n: '475.2K', l: 'new viewers' },
+          { n: '37.8K', l: 'likes' },
+          { n: '24.4K', l: 'shares' },
+        ],
+      },
+      {
+        type: 'screens',
+        title: 'Behind the numbers',
+        text: 'Most reach comes from the For You feed, and a recent spike shows how quickly the right story can travel: post views grew 744.8% over the last 60 days.',
+        images: [
+          { src: tiktokProfile, alt: "The pet shop's TikTok profile with 6,825 followers and 499K likes", caption: 'Channel profile · 6,825+ followers' },
+          { src: tiktokViewers, alt: 'Viewer insights: 700.9K total viewers, 475.2K new viewers; 66% female, 33% male', caption: 'Audience · 66% female viewers' },
+          { src: tiktok60, alt: 'Last 60 days: 227.9K post views, up 744.8%; 84.2% of traffic from the For You feed', caption: 'Last 60 days · +744.8% post views' },
+          { src: tiktokTopPosts, alt: 'Top posts by views over the last year, led by a post with 187K views', caption: 'Top post · 187K views' },
+        ],
+      },
     ],
   },
   {
@@ -126,6 +157,18 @@ export const cases = [
           { src: cidTeam, alt: 'The FutureFlow team at the Beyond the Blueprint stand with campaign posters and merchandise', variant: 'wide' },
           { src: cidKiosk, alt: 'Concept visual: an interactive CID information kiosk with a district map', variant: 'sq' },
           { src: cidLogo, alt: 'Beyond the Blueprint campaign logo by FutureFlow', variant: 'sq logo-fig' },
+        ],
+      },
+    ],
+    extra: [
+      {
+        type: 'figures',
+        title: 'Campaign touchpoints',
+        text: 'Beyond the Blueprint brings CID to life where people meet it: an open day invitation for residents and a collaboration moment that connects partners around the district.',
+        layout: 'cid',
+        images: [
+          { src: cidOpenDay, alt: 'Concept poster: CID Open Day at the Central Library, with a register-now QR code', caption: 'CID Open Day poster', className: 'contain white' },
+          { src: cidCollaborations, alt: 'Concept visual: partners gathered around a CID district model at a partner collaboration summit', caption: 'CID Collaborations' },
         ],
       },
     ],
@@ -161,10 +204,12 @@ export const cases = [
       {
         type: 'figures',
         title: 'From research to insight',
-        text: 'Consumer interviews, a focus group and on-site observation of tea shops fed into affinity mapping and a customer journey, from awareness and checking reviews to trying the drink and final thoughts.',
-        layout: 'single',
+        text: 'Desk research into boba culture and the European bubble tea market, plus observation of tea shops, set the context. A focus group and consumer interviews followed, and affinity mapping turned what we heard into themes for the persona and customer journey.',
+        layout: 'et-research',
         images: [
-          { src: etResearch, alt: 'Research collage: affinity-mapping sticky notes, observation photos of tea shops, the customer journey stages and the focus group session', caption: 'Affinity mapping, field observation, customer journey and focus group' },
+          { src: etDesk, alt: 'Desk research on boba culture and the European bubble tea market, alongside a Miro board of tea shop observation photos and notes', caption: 'Desk research & field observation' },
+          { src: etFocusGroup, alt: 'Focus group session with participants around a table', caption: 'Focus group · 10 participants' },
+          { src: etAffinity, alt: 'Wall of colour-coded sticky notes from affinity mapping', caption: 'Affinity mapping' },
         ],
       },
       {
@@ -174,9 +219,9 @@ export const cases = [
         items: [
           { name: 'Wood', src: etWood, notes: 'Schisandra berry · Green sencha · Lemongrass · Matcha' },
           { name: 'Fire', src: etFire, notes: 'Rose petal · Strawberry · Holy basil · Chai · Hibiscus' },
-          { name: 'Earth', src: etEarth },
+          { name: 'Earth', src: etEarth, notes: 'Oolong · Brown sugar · Mocha · Hojicha · Rooibos · Chamomile' },
           { name: 'Water', src: etWater, notes: 'Black sesame · Black tea · Black soy · Sea salt · Pu-erh' },
-          { name: 'Metal', src: etMetal },
+          { name: 'Metal', src: etMetal, notes: 'White tea · Cold brew · Earl Grey · Jasmine' },
         ],
       },
       {
@@ -196,12 +241,12 @@ export const cases = [
     kicker: 'Third project',
     meta: ['HR Committee Member · 2025–present', 'Vietnamese Student Association in the Netherlands'],
     title: 'VSNL: HR Committee & Career Fair',
-    sub: 'Coordination, scheduling and on-site event support',
+    sub: 'Coordination, scheduling and participant communication',
     brief: [
-      { k: 'Role', v: 'As part of the HR Committee, I support internal coordination and student activities, and work with the team on-site to help events run smoothly.' },
-      { k: 'Career Fair', v: 'As HR sub-lead, I coordinated around 25 participant time slots, prepared online forms, managed confirmation emails and supported on-site coordination.' },
-      { k: 'Takeaway', v: 'Keeping participant information and schedules organised', emphasis: true, after: ' while adapting to changes during a live event.' },
-      { k: 'Contributed', chips: ['HR support', 'Scheduling & coordination', 'Online forms', 'Email communication', 'On-site event support'] },
+      { k: 'Role', v: 'As part of the HR Committee, I support internal coordination and student activities within the association.' },
+      { k: 'Career Fair', v: 'As HR sub-lead for the online Career Fair, I coordinated around 25 participant time slots, prepared online forms and managed confirmation emails.' },
+      { k: 'Takeaway', v: 'Organising people, time and information behind the scenes,', emphasis: true, after: ' and keeping communication clear and consistent so every participant knew exactly when and where to join.' },
+      { k: 'Contributed', chips: ['HR support', 'Scheduling & coordination', 'Online forms', 'Email communication'] },
     ],
     stats: [
       { n: '~25', l: 'participant time slots coordinated' },
@@ -300,7 +345,7 @@ export const experience = [
   {
     when: '2025 – present',
     title: 'Vietnamese Student Association in the Netherlands — HR Committee',
-    text: 'Support internal coordination and student activities. As HR sub-lead for the Career Fair, coordinated around 25 participant time slots, prepared online forms, managed confirmation emails and supported on-site coordination.',
+    text: 'Support internal coordination and student activities. As HR sub-lead for the online Career Fair, coordinated around 25 participant time slots, prepared online forms and managed confirmation emails.',
   },
   {
     when: 'Feb 2025 – Jun 2025',
@@ -320,7 +365,7 @@ export const skills = [
   { icon: 'search', title: 'Research', items: ['Desk research', 'Interviews & surveys', 'Audience analysis', 'Competitor research', 'Review analysis', 'Keyword & search analysis'] },
   { icon: 'lines', title: 'Strategy & communication', items: ['Communication strategy', 'Key messaging', 'Concept development', 'Storytelling'] },
   { icon: 'phone', title: 'Digital & content', items: ['Content publishing', 'Content scheduling', 'Performance monitoring', 'Basic digital marketing'] },
-  { icon: 'tool', title: 'Tools', items: ['Microsoft Word', 'PowerPoint', 'Excel', 'Canva', 'Google Forms', 'Google Analytics', 'Ahrefs'] },
+  { icon: 'tool', title: 'Tools', items: ['Microsoft Word', 'PowerPoint', 'Excel', 'Canva', 'CapCut', 'Google Forms'] },
   { icon: 'globe', title: 'Languages', items: ['Vietnamese', 'English'] },
 ]
 

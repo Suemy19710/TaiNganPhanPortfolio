@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="hero-grid">
           <div>
             <span className="status"><i></i>{profile.status}</span>
-            <p className="hello">Hi, I'm {profile.firstName}</p>
+            <p className="hello">Hi, I'm</p>
             <h1 className="display name" aria-label={profile.fullName}>
               <span>{profile.firstName}</span>
               <span className="outline">{profile.lastName}</span>
@@ -33,7 +33,6 @@ export default function Hero() {
           </div>
           <div className="portrait">
             <figure><img src={profile.portrait} alt={'Portrait of ' + profile.shortName} /></figure>
-            <div className="tag-float"><strong>{profile.tag.title}</strong>{profile.tag.text}</div>
           </div>
         </div>
         <div className="facts">

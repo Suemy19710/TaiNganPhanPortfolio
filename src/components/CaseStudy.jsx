@@ -147,8 +147,40 @@ function Campaign({ block }) {
   )
 }
 
+function Metrics({ block }) {
+  return (
+    <div className="metrics">
+      <div className="metrics-head">
+        <h4>{block.title}</h4>
+        <span className="label">{block.period}</span>
+      </div>
+      <ul>
+        {block.items.map((m) => <li key={m.l}><b>{m.n}</b><span>{m.l}</span></li>)}
+      </ul>
+    </div>
+  )
+}
+
+function Screens({ block }) {
+  return (
+    <>
+      <ExtraHead block={block} />
+      <ul className="screens">
+        {block.images.map((img) => (
+          <li key={img.alt}>
+            <figure><img src={img.src} alt={img.alt} loading="lazy" /></figure>
+            <span>{img.caption}</span>
+          </li>
+        ))}
+      </ul>
+    </>
+  )
+}
+
 function Block({ block }) {
   switch (block.type) {
+    case 'metrics': return <Metrics block={block} />
+    case 'screens': return <Screens block={block} />
     case 'gallery': return <Gallery block={block} />
     case 'persona': return <Persona block={block} />
     case 'phone':

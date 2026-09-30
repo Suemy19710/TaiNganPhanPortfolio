@@ -20,7 +20,6 @@ export default function About() {
               <dd><div className="chips">{seeking.roles.map((r) => <span className="chip" key={r}>{r}</span>)}</div></dd>
               <dt>Where</dt><dd>{seeking.where}</dd>
               <dt>Strengths</dt><dd>{seeking.strengths}</dd>
-              <dt>Culture</dt><dd>{seeking.culture}</dd>
             </dl>
           </aside>
         </Reveal>
