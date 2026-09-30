@@ -10,6 +10,7 @@ import tiktok60 from '../assets/tiktok-60-days.jpg'
 import tiktokTopPosts from '../assets/tiktok-top-posts.jpg'
 import cidCollaborations from '../assets/cid-collaborations.webp'
 import cidOpenDay from '../assets/cid-open-day.webp'
+import cidOoh from '../assets/cid-ooh-poster.webp'
 import etWood from '../assets/et-wood.jpg'
 import etFire from '../assets/et-fire.jpg'
 import etEarth from '../assets/et-earth.jpg'
@@ -25,6 +26,7 @@ import vsnl1 from '../assets/vsnl-1.jpg'
 import vsnl2 from '../assets/vsnl-2.jpg'
 import vsnl3 from '../assets/vsnl-3.jpg'
 import vsnl4 from '../assets/vsnl-4.jpg'
+import vsnlGroup from '../assets/vsnl-group.webp'
 import ksFacade from '../assets/ks-facade.jpg'
 import ksInterior from '../assets/ks-interior.jpg'
 import ksLogo from '../assets/ks-logo.png'
@@ -47,6 +49,8 @@ export const profile = {
   email: 'phantaingan250511@gmail.com',
   phone: '+31 686 147 455',
   phoneRaw: '+31686147455',
+  linkedin: 'https://www.linkedin.com/in/tai-ngan-phan-b40998332/',
+  linkedinLabel: 'linkedin.com/in/tai-ngan-phan',
   location: 'Netherlands',
   footerTagline: 'Marketing & Communication · Netherlands',
 }
@@ -78,7 +82,7 @@ export const about = {
   seeking: {
     title: 'An internship in marketing or communication',
     roles: ['Marketing', 'Communication', 'Social media', 'Content', 'Brand'],
-    where: 'Anywhere in the Netherlands; hybrid or on-site',
+    where: 'Anywhere in the Netherlands, working in-office with the team',
     strengths: 'Research-led thinking, clear messaging, hands-on content work',
   },
 }
@@ -102,6 +106,7 @@ export const cases = [
       { n: '3+ yrs', l: 'of ongoing, remote collaboration' },
     ],
     visual: [
+      { type: 'phone', src: tiktokProfile, alt: "The pet shop's TikTok profile with 6,825 followers and 499K likes" },
       { type: 'phone', src: tiktokOverview, alt: 'TikTok Studio key metrics for Sep 30, 2025 – Sep 29, 2026: 810.9K post views, 11K profile views, 37.8K likes, 722 comments and 24.4K shares' },
     ],
     extra: [
@@ -122,8 +127,7 @@ export const cases = [
         title: 'Behind the numbers',
         text: 'Most reach comes from the For You feed, and a recent spike shows how quickly the right story can travel: post views grew 744.8% over the last 60 days.',
         images: [
-          { src: tiktokProfile, alt: "The pet shop's TikTok profile with 6,825 followers and 499K likes", caption: 'Channel profile · 6,825+ followers' },
-          { src: tiktokViewers, alt: 'Viewer insights: 700.9K total viewers, 475.2K new viewers; 66% female, 33% male', caption: 'Audience · 66% female viewers' },
+          { src: tiktokViewers, alt: 'Viewer insights: 700.9K total viewers, 475.2K new viewers; 66% female, 33% male', caption: 'Reach · 475.2K new viewers in a year' },
           { src: tiktok60, alt: 'Last 60 days: 227.9K post views, up 744.8%; 84.2% of traffic from the For You feed', caption: 'Last 60 days · +744.8% post views' },
           { src: tiktokTopPosts, alt: 'Top posts by views over the last year, led by a post with 187K views', caption: 'Top post · 187K views' },
         ],
@@ -155,8 +159,7 @@ export const cases = [
         type: 'gallery',
         images: [
           { src: cidTeam, alt: 'The FutureFlow team at the Beyond the Blueprint stand with campaign posters and merchandise', variant: 'wide' },
-          { src: cidKiosk, alt: 'Concept visual: an interactive CID information kiosk with a district map', variant: 'sq' },
-          { src: cidLogo, alt: 'Beyond the Blueprint campaign logo by FutureFlow', variant: 'sq logo-fig' },
+          { src: cidLogo, alt: 'Beyond the Blueprint campaign logo by FutureFlow', variant: 'wide logo-fig' },
         ],
       },
     ],
@@ -164,11 +167,17 @@ export const cases = [
       {
         type: 'figures',
         title: 'Campaign touchpoints',
-        text: 'Beyond the Blueprint brings CID to life where people meet it: an open day invitation for residents and a collaboration moment that connects partners around the district.',
-        layout: 'cid',
-        images: [
-          { src: cidOpenDay, alt: 'Concept poster: CID Open Day at the Central Library, with a register-now QR code', caption: 'CID Open Day poster', className: 'contain white' },
-          { src: cidCollaborations, alt: 'Concept visual: partners gathered around a CID district model at a partner collaboration summit', caption: 'CID Collaborations' },
+        text: 'Beyond the Blueprint brings CID to life where people meet it: out-of-home posters in the city, an open day invitation for residents, interactive information points and a collaboration moment that connects partners around the district.',
+        layout: 'justified',
+        rows: [
+          [
+            { src: cidOoh, ratio: 960 / 678, alt: 'OOH concept: Beyond the Blueprint poster at a bus shelter, “Not just a plan on paper. CID is where innovation is applied to real societal challenges in urban life.”', caption: 'Out-of-home poster' },
+            { src: cidOpenDay, ratio: 725 / 910, alt: 'Concept poster: CID Open Day at the Central Library, with a register-now QR code', caption: 'CID Open Day poster' },
+          ],
+          [
+            { src: cidCollaborations, ratio: 960 / 639, alt: 'Concept visual: partners gathered around a CID district model at a partner collaboration summit', caption: 'CID Collaborations' },
+            { src: cidKiosk, ratio: 634 / 438, alt: 'Concept visual: an interactive CID information kiosk with a district map', caption: 'Interactive information point' },
+          ],
         ],
       },
     ],
@@ -197,19 +206,18 @@ export const cases = [
           { n: '3', l: 'consumer interviews' },
           { n: '10', l: 'focus group participants' },
         ],
-        journey: ['Research', 'Persona', 'Customer journey', 'Ideation', 'Concept testing'],
       },
     ],
     extra: [
       {
         type: 'figures',
         title: 'From research to insight',
-        text: 'Desk research into boba culture and the European bubble tea market, plus observation of tea shops, set the context. A focus group and consumer interviews followed, and affinity mapping turned what we heard into themes for the persona and customer journey.',
+        text: 'Desk research into boba culture and the European bubble tea market, plus observation of tea shops, set the context. A focus group and consumer interviews followed, and idea development sessions turned what we heard into themes for the persona and customer journey.',
         layout: 'et-research',
         images: [
           { src: etDesk, alt: 'Desk research on boba culture and the European bubble tea market, alongside a Miro board of tea shop observation photos and notes', caption: 'Desk research & field observation' },
           { src: etFocusGroup, alt: 'Focus group session with participants around a table', caption: 'Focus group · 10 participants' },
-          { src: etAffinity, alt: 'Wall of colour-coded sticky notes from affinity mapping', caption: 'Affinity mapping' },
+          { src: etAffinity, alt: 'Wall of colour-coded sticky notes from the idea development session', caption: 'Idea development' },
         ],
       },
       {
@@ -241,7 +249,6 @@ export const cases = [
     kicker: 'Third project',
     meta: ['HR Committee Member · 2025–present', 'Vietnamese Student Association in the Netherlands'],
     title: 'VSNL: HR Committee & Career Fair',
-    sub: 'Coordination, scheduling and participant communication',
     brief: [
       { k: 'Role', v: 'As part of the HR Committee, I support internal coordination and student activities within the association.' },
       { k: 'Career Fair', v: 'As HR sub-lead for the online Career Fair, I coordinated around 25 participant time slots, prepared online forms and managed confirmation emails.' },
@@ -254,12 +261,12 @@ export const cases = [
     visual: [
       {
         type: 'gallery',
-        cols: 3,
         images: [
-          { src: vsnl1, alt: 'Tai Ngan with two VSNL members at an outdoor association event', variant: 'wide' },
-          { src: vsnl2, alt: 'VSNL Career Fair 2026 agenda announcement', variant: 'sq' },
-          { src: vsnl3, alt: 'Career Fair agenda: mentor sharing session, networking and one-on-one services', variant: 'sq' },
-          { src: vsnl4, alt: 'VSNL HR committee group photo', variant: 'sq' },
+          { src: vsnlGroup, alt: 'Large group photo of VSNL members and students at an outdoor association event', variant: 'wide' },
+          { src: vsnl1, alt: 'Tai Ngan with two VSNL members at an outdoor association event', variant: 'sq tile' },
+          { src: vsnl2, alt: 'VSNL Career Fair 2026 agenda announcement', variant: 'sq tile' },
+          { src: vsnl3, alt: 'Career Fair agenda: mentor sharing session, networking and one-on-one services', variant: 'sq tile' },
+          { src: vsnl4, alt: 'VSNL HR committee group photo', variant: 'sq tile' },
         ],
       },
     ],

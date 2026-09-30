@@ -22,6 +22,10 @@ export default function Contact() {
               <CopyButton text={profile.phoneRaw} />
             </div>
             <div className="line">
+              <div><span className="label">LinkedIn</span><a href={profile.linkedin} target="_blank" rel="noreferrer">{profile.linkedinLabel}</a></div>
+              <a className="copy" href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="Open LinkedIn profile (opens in a new tab)">Open</a>
+            </div>
+            <div className="line">
               <div><span className="label">Location</span><span className="val">{profile.location}</span></div>
             </div>
           </div>

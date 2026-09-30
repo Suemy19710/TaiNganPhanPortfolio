@@ -35,11 +35,13 @@ function Persona({ block }) {
       <div className="persona-row">
         {block.numbers.map((n) => <div key={n.l}><b>{n.n}</b><span>{n.l}</span></div>)}
       </div>
-      <ol className="journey" aria-label="Project process">
-        {block.journey.map((step, i) => (
-          <li key={step}><small>{String(i + 1).padStart(2, '0')}</small>{step}</li>
-        ))}
-      </ol>
+      {block.journey && (
+        <ol className="journey" aria-label="Project process">
+          {block.journey.map((step, i) => (
+            <li key={step}><small>{String(i + 1).padStart(2, '0')}</small>{step}</li>
+          ))}
+        </ol>
+      )}
     </div>
   )
 }
@@ -72,17 +74,36 @@ function Elements({ block }) {
   )
 }
 
+function Figure({ img, style }) {
+  return (
+    <figure className={img.className} style={style}>
+      <img src={img.src} alt={img.alt} loading="lazy" />
+      {img.caption && <figcaption>{img.caption}</figcaption>}
+    </figure>
+  )
+}
+
 function Figures({ block }) {
+  if (block.rows) {
+    // justified rows: each image grows by its aspect ratio, so images in a row share one height
+    return (
+      <>
+        <ExtraHead block={block} />
+        <div className={'figures ' + (block.layout || '')}>
+          {block.rows.map((row, r) => (
+            <div className="fig-row" key={r}>
+              {row.map((img) => <Figure key={img.alt} img={img} style={{ flex: img.ratio + ' 1 0' }} />)}
+            </div>
+          ))}
+        </div>
+      </>
+    )
+  }
   return (
     <>
       <ExtraHead block={block} />
       <div className={'figures ' + (block.layout || '')}>
-        {block.images.map((img) => (
-          <figure key={img.alt} className={img.className}>
-            <img src={img.src} alt={img.alt} loading="lazy" />
-            {img.caption && <figcaption>{img.caption}</figcaption>}
-          </figure>
-        ))}
+        {block.images.map((img) => <Figure key={img.alt} img={img} />)}
       </div>
     </>
   )
@@ -216,7 +237,7 @@ export default function CaseStudy({ data, index }) {
             <span key={i}>{i > 0 && <span className="x"> x </span>}{part}</span>
           ))}
         </h3>
-        <p className="sub">{data.sub}</p>
+        {data.sub && <p className="sub">{data.sub}</p>}
         <dl className="brief">
           {data.brief.map((b) => (
             <div key={b.k}><dt>{b.k}</dt><dd><BriefValue item={b} /></dd></div>
@@ -229,7 +250,14 @@ export default function CaseStudy({ data, index }) {
         )}
       </div>
       <div className="visual">
-        {data.visual.map((b, i) => <Block key={i} block={b} />)}
+        {data.visual.every((b) => b.type === 'phone') && data.visual.length > 1 ? (
+          // several phone screenshots sit side by side in one row
+          <div className="phone-wrap multi">
+            {data.visual.map((b) => <div className="phone" key={b.alt}><img src={b.src} alt={b.alt} loading="lazy" /></div>)}
+          </div>
+        ) : (
+          data.visual.map((b, i) => <Block key={i} block={b} />)
+        )}
       </div>
       {data.extra && (
         <div className="case-extra">

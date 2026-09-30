@@ -29,6 +29,7 @@ export default function Hero() {
             <div className="hero-cta">
               <a className="btn btn-solid" href="#work">See my work</a>
               <a className="btn btn-ghost" href="#contact">Contact me</a>
+              <a className="btn btn-ghost" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
             </div>
           </div>
           <div className="portrait">

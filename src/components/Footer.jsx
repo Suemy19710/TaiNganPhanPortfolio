@@ -5,7 +5,7 @@ export default function Footer() {
     <footer>
       <div className="wrap">
         <span>{profile.fullName}</span>
-        <span>{profile.footerTagline}</span>
+        <span>{profile.footerTagline} · <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a></span>
       </div>
     </footer>
   )
